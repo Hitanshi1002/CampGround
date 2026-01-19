@@ -6,11 +6,13 @@
     <title>New Camp Ground</title>
 </head>
 <body>
-    <form action="/camgrounds" method="post">
+    <form action="/campgrounds" method="POST">
         <label for="title">Title of Camp:</label>
-        <input type="text" id="title">
+        <input type="text" id="title" name="campground[title]">
+        <br>
         <label for="location">Location of the Camp:</label>
-        <input type="text" id="location">
+        <input type="text" id="location" name="campground[location]">
+        <br>
         <button type="submit">Submit</button>
     </form>
 </body>
