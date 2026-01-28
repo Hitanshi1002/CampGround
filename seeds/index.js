@@ -18,7 +18,9 @@ const seed= async ()=>{
         const random1000 = Math.floor(Math.random() * 1000);
         const camp = new campground({
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
-            title: `${sample(descriptors)} ${sample(places)}`
+            title: `${sample(descriptors)} ${sample(places)}`,
+            image: `https://picsum.photos/400?random=${Math.random()}`,
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui repellendus soluta ad, blanditiis necessitatibus quas pariatur! Dignissimos inventore sapiente veritatis sit, repudiandae laboriosam, alias sequi fugiat necessitatibus ab dolores quidem."
         })
         await camp.save();
     }
